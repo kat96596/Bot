@@ -1,1 +1,1 @@
-# Bot
+# Weather forecast bot
