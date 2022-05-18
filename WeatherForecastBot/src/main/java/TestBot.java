@@ -13,16 +13,15 @@ import java.sql.SQLException;
 
 public class TestBot extends TelegramLongPollingBot {
 
-    //*Заменить имя бота на "0"
     @Override
     public String getBotUsername() {
-        return "exampleforuniversitybot";
+        return "Weatheeerrrforeeecassstbot.";
     }
 
-    //*Заменить токен бота на "0"
+    
     @Override
     public String getBotToken() {
-        return "5104347139:AAHCsYKynTcQieT9vweoS7ob0JgPoCVGoTU";
+        return "5372786635:AAEyvhyIYK9YNQ-i8oJwZGxgWDK2djeN-Tc";
     }
 
     @Override
@@ -79,7 +78,7 @@ public class TestBot extends TelegramLongPollingBot {
                 .addPathSegment("v1")
                 .addPathSegment("daily")
                 .addPathSegment("1day")
-                .addPathSegment("292712")
+                .addPathSegment("295863")
                 .addQueryParameter("apikey", "t2cVAklY2TNAPLX9JqSyftAywCDLXTws")
                 .addQueryParameter("metric", "true")
                 .build();
@@ -91,7 +90,7 @@ public class TestBot extends TelegramLongPollingBot {
         Response response = okHttpClient.newCall(request).execute();
         String jsonString = response.body().string();
 
-        //СТРОКА -> JSON -> СТРОКУ min/max
+        //СТРОКА -> JSON -> СТРОКА min/max
         //CLASS -> JSON
         //JSON -> CLASS
 
