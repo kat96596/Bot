@@ -11,7 +11,7 @@ import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class App {
+public class app {
 
     public static void main(String[] args) throws Exception {
         try {
