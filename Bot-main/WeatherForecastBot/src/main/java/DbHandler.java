@@ -3,7 +3,7 @@ import org.sqlite.JDBC;
 import java.sql.*;
 import java.util.Properties;
 
-public class DbHandler {
+public class dbHandler {
 
     Properties properties = new Properties();
 
@@ -14,7 +14,7 @@ public class DbHandler {
         connection = DriverManager.getConnection(properties.getProperty("db.path"));
     }
 
-    public void SaveTemperature(Temperature temperature){
+    public void saveTemperature(Temperature temperature){
         try(Statement statement = this.connection.createStatement()) {
             statement.execute("INSERT INTO temperature(min, max, date) " +
                     "VALUES(" + temperature.getMin() + ", " + temperature.getMax() + ", 'test')");
@@ -23,7 +23,7 @@ public class DbHandler {
         }
     }
 
-    public Temperature GetTemperature(){
+    public Temperature getTemperature(){
         Temperature temperature = null;
 
         try(Statement statement = this.connection.createStatement()) {
